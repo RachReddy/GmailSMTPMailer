@@ -1,0 +1,29 @@
+GMAIL-MAILER-APPLICATION
+========================
+
+-'GmailMailerApp' is a .net console based application used to send an email via SMTP from our gmail accounts to any other external service providers like outlook etc.
+-To perform this we need some external configuration to the sender Gmail account, which is extracting the app password.
+
+- fromPassword : Its not the usual password that we use to login to the gmail account, rather its the application password.
+
+How to get application password?
+_______________________________
+Step1: Log in to the sender gmail account 
+Step2: Go to manage your google acount
+Step3: a. Select Security in the left nagivation. Turn on & set up the 2-step verification option, only then the application password option will be available.
+       b. Select Security again, right below the 2-Step Verification, you will now have the App passwords options, which will be None by default, configure it.
+Step4: Under App passwords option, choose the Select app as 'Mail' & device as 'Windows Computer' (choose mac, if you are using one). Click on Generate.
+Step5: When clicked on generate, a pop-up window with 16 digit app password is displayed, copy the app password to you console application's code.
+
+
+Pre-requiste namespaces list:
+_____________________________
+1. System.Net: This namespace provides classes for accessing and interacting with network resources. It includes classes like WebClient for downloading data from URLs, HttpWebRequest and HttpWebResponse for making HTTP requests and handling responses, TcpClient and TcpListener for working with TCP connections, and more. In the context of sending emails, this namespace is essential for establishing connections to SMTP (Simple Mail Transfer Protocol) servers.
+2. System.Net.Mail: This namespace is specifically designed for handling email functionality within .NET applications. It provides classes like MailMessage for creating email messages, SmtpClient for sending email via SMTP servers, and Attachment for including file attachments in emails. Using this namespace, you can easily set up and send emails from your C# applications using SMTP, which is precisely what you would need for your project to set up Gmail's SMTP connection and send emails.
+
+In summary, you need these namespaces (System.Net and System.Net.Mail) in your C# project to handle network operations and send emails, respectively. They provide the necessary functionality and classes to establish connections to SMTP servers and send email messages efficiently.
+
+
+   
+ 
+
